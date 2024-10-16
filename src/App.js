@@ -80,9 +80,9 @@ const onTextChange = (event) => {
     <div className="App">
         <Container>
             <Header>
-            <AppNameComponent><AppIcon src="chef-hat-chef-svgrepo-com.svg" style={{ width: '30px', height: '30px' }} />RecipeFinder</AppNameComponent>
+            <AppNameComponent><AppIcon src={`${process.env.PUBLIC_URL}/chef-hat-chef-svgrepo-com.svg`} style={{ width: '30px', height: '30px' }} />RecipeFinder</AppNameComponent>
             <SearchComponent>
-                <SearchIcon src="/search-icon.svg" />
+                <SearchIcon src={`${process.env.PUBLIC_URL}/search-icon.svg`} />
                 <SearchInput placeholder="Search Input" onChange={onTextChange} />
             </SearchComponent>
             <TaglineComponent>
@@ -96,7 +96,7 @@ const onTextChange = (event) => {
                 ))
                ) : (
                  <PlaceholderContainer>
-                   <Placeholder src="chef-hat-chef-svgrepo-com.svg" />
+                   <Placeholder src={`${process.env.PUBLIC_URL}/chef-hat-chef-svgrepo-com.svg`} />
                  </PlaceholderContainer>
                )}
             </RecipeListContainer>
