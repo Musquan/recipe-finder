@@ -8,8 +8,9 @@ import DialogActions from '@mui/material/DialogActions';
 import {Header,AppNameComponent,AppIcon,SearchComponent,SearchIcon,SearchInput,TaglineComponent} from './components/headerComponent';
 import {RecipeContainer,RecipeListContainer,CoverImage,Ingredients,RecipeName,SeeMoreText,PlaceholderContainer} from './components/recipeComponent';
 
-const APP_ID = "4036222b";
-const APP_KEY = "cb09d2f3ce68c06f583abdf28ba876f5";
+const APP_ID = process.env.REACT_APP_API_ID;
+const APP_KEY = process.env.REACT_APP_API_KEY;
+
 const Container = styled.div`
      display:flex;
      flex-direction:column;
@@ -40,13 +41,12 @@ const RecipeComponent = (props) => {
                 <td>{ingredientObj.weight}</td>
               </tr>
             ))}
-            }
             </tbody>
           </table>
         </DialogContent>
         <DialogActions>
           <Ingredients onClick={() => window.open(recipeObj.url)}>See More Info</Ingredients>
-          <SeeMoreText onClick={() => setShow("false")}>Close</SeeMoreText>
+          <SeeMoreText onClick={() => setShow("")}>Close</SeeMoreText>
         </DialogActions>
       </Dialog>
       <RecipeContainer>
