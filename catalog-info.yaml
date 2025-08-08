@@ -1,0 +1,13 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: recipe-finder
+  description: A service to help users find and manage recipes efficiently.
+  annotations:
+    github.com/project-slug: Musquan/recipe-finder
+    jira/project-key: SCRUM
+    jira/label: backstage-component:recipe-finder
+spec:
+  type: service
+  owner: ICS
+  lifecycle: experimental
